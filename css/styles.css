@@ -1,0 +1,13 @@
+
+.carousel-item img{
+    width: 100% !important;
+    height: 95vh !important;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
