@@ -116,18 +116,18 @@
 
   <section class="my-4">
     <div class='py-4'>
-      <h2 class="text-center">Nature</h2>
+      <h2 class="text-center">Architecture</h2>
     </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-4 col-12">
-          <img src="img/dawid-zawila--G3rw6Y02D0-unsplash.jpg" class="img-fluid pd-3" alt="nature">
+          <img src="img/anatolii-nesterov-XtdG5ZJpyoc-unsplash.jpg" class="img-fluid pd-3" alt="nature">
         </div>
         <div class="col-lg-4 col-md-4 col-12">
-          <img src="img/hendrik-cornelissen--qrcOR33ErA-unsplash.jpg" class="img-fluid pd-3" alt="nature">
+          <img src="img/ali-zeynalli-lfnwueL8rfw-unsplash.jpg" class="img-fluid pd-3" alt="nature">
         </div>
         <div class="col-lg-4 col-md-4 col-12">
-          <img src="img/wil-stewart-pHANr-CpbYM-unsplash.jpg" class="img-fluid pd-3" alt="nature">
+          <img src="img/borys-jarzcuk-UqTkotpdE6k-unsplash.jpg" class="img-fluid pd-3" alt="nature">
         </div>
       </div>
     </div>
@@ -135,23 +135,23 @@
 
   <section class="my-4">
     <div class='py-4'>
-      <h2 class="text-center">Nature</h2>
+      <h2 class="text-center">Travel</h2>
     </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-4 col-12">
-          <img src="img/dawid-zawila--G3rw6Y02D0-unsplash.jpg" class="img-fluid pd-3" alt="nature">
+          <img src="img/luca-bravo-O453M2Liufs-unsplash.jpg" class="img-fluid pd-3" alt="travel">
         </div>
         <div class="col-lg-4 col-md-4 col-12">
-          <img src="img/hendrik-cornelissen--qrcOR33ErA-unsplash.jpg" class="img-fluid pd-3" alt="nature">
+          <img src="img/eva-darron-oCdVtGFeDC0-unsplash.jpg" class="img-fluid pd-3" alt="travel">
         </div>
         <div class="col-lg-4 col-md-4 col-12">
-          <img src="img/wil-stewart-pHANr-CpbYM-unsplash.jpg" class="img-fluid pd-3" alt="nature">
+          <img src="img/drif-riadh-YpkuRn54y4w-unsplash.jpg" class="img-fluid pd-3" alt="travel">
         </div>
       </div>
     </div>
   </section>
-  
+
   <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
