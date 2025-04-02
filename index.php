@@ -7,8 +7,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    
     <title>Photo Gellery</title>
+    <link rel="stylesheet" href="css/styles.css" rel="stylesheet">
+    
   </head>
   <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-dark">
@@ -58,23 +60,23 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/travel.jpg" class="d-block w-100" alt="Travel img">
+      <img src="img/dino-reichmuth-A5rCN8626Ck-unsplash.jpg" class="d-block w-100" alt="Travel img">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Travel</h5>
+        <h3>Travel</h3>
         
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/Architecture.jpg" class="d-block w-100" alt="Architecture img">
+      <img src="img/lance-anderson-QdAAasrZhdk-unsplash.jpg" class="d-block w-100" alt="Architecture img">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Architecture</h5>
+        <h3>Architecture</h3>
         
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/Nature.jpg" class="d-block w-100" alt="Nature img">
+      <img src="img/adam-kool-ndN00KmbJ1c-unsplash.jpg" class="d-block w-100" alt="Nature img">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Nature</h5>
+        <h3>Nature</h3>
         
       </div>
     </div>
