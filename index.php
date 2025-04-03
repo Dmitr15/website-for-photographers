@@ -173,7 +173,10 @@
             <label for="number">Number</label>
             <input type="text" name="number" class="form-control" id="number">
           </div>
-          <button type="submit" class="btn btn-success">Submit</button>
+          <div class="col-12 text-center filters-btns">
+              <input type="submit" value="submit" class="btn btn-primary">
+              <input type="submit" name="clearFilter" value="clear" class="btn btn-danger">
+          </div>
         </form>
       </div>
     </div>
