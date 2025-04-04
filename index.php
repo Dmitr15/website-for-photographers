@@ -2,17 +2,17 @@
 error_reporting(E_ERROR | E_PARSE);
 require_once("formhandler.php");
 $errors = formEditor();
+$description = descriptionHandler();
+echo $description;
 ?>
 
 <!doctype html>
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
 
   <title>Photo Gellery</title>
@@ -29,7 +29,7 @@ $errors = formEditor();
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          
+
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -159,31 +159,43 @@ $errors = formEditor();
   <section>
     <div class="my-4">
       <div class="py-4">
-        <h2 class="text-center">Contact Us</h2>
+        <h2 class="text-center">Contact Me</h2>
       </div>
 
       <div class="w-50 m-auto">
+        <?php foreach ($errors as $error): ?>
+          <div class='error'><?= $error ?></div>
+        <?php endforeach; ?>
+        <?php if (empty($errors) && !empty($_POST['submit'])): ?>
+          <div class='error'>Application sent successfully!</div>
+        <?php endif; ?>
         <form action="" method="post">
 
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" name="name" class="form-control" required id="name" placeholder="John Doe" value="<?=htmlspecialchars($_POST["name"])?>">
+            <input type="text" name="name" class="form-control" required id="name" placeholder="John Doe" value="<?= htmlspecialchars($_POST["name"]) ?>">
           </div>
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" name="email" class="form-control" placeholder='example@example.com' required id="email" value="<?=htmlspecialchars($_POST["email"])?>">
+            <input type="email" name="email" class="form-control" placeholder='example@gmail.com' required id="email" value="<?= htmlspecialchars($_POST["email"]) ?>">
           </div>
 
           <div class="form-group">
             <label for="number">Number</label>
-            <input type="text" name="number" class="form-control" required id="number" placeholder="1 800 937 8997" value="<?=htmlspecialchars($_POST["number"])?>">
+            <input type="text" name="number" class="form-control" required id="number" placeholder="1 800 937 8997" value="<?= htmlspecialchars($_POST["number"]) ?>">
+          </div>
+
+          <div class="form-group">
+            <label for="description">Your offer</label>
+            <textarea type="text" name="description" class="form-control" id="description"><?= htmlspecialchars($description) ?></textarea>
           </div>
           <div class="col-12 text-center filters-btns">
-              <input type="submit" value="submit" class="btn btn-primary">
-              <input type="submit" name="clearFilter" value="clear" class="btn btn-danger">
+            <input type="submit" name="submit" value="Send" class="btn btn-primary">
+            <input type="submit" name="clearFilter" value="Clear" class="btn btn-danger">
           </div>
         </form>
+
       </div>
     </div>
   </section>
@@ -191,7 +203,7 @@ $errors = formEditor();
   <section>
     <div class="my-4">
       <div class="py-4">
-      <h2 class="text-center">About</h2>
+        <h2 class="text-center">About Me</h2>
       </div>
       <div class="container">
         <h3 class="text-center">Dan</h3>
