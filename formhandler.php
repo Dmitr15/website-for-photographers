@@ -2,13 +2,21 @@
 require_once("db.php");
 
 function formEditor(): array{
+    
     $errors= [];
     global $link;
+    if (!empty($_POST['clearFilter'])) {
+        return $errors;
+    }
+
+    if ('POST' != $_SERVER['REQUEST_METHOD']) {
+        return $errors;
+    }
     
-    $sql = "INSERT INTO users (name, email, number) VALUES ";
     $name = mysqli_real_escape_string($link, $_POST['name']);
     $email = mysqli_real_escape_string($link, $_POST['email']);
     $number = mysqli_real_escape_string($link, $_POST['number']);
+    $description = mysqli_real_escape_string($link, $_POST['description']);
     $phone_number_validation_regex = "/^\\+?[1-9][0-9]{7,14}$/";
 
     if (!empty($name) || !empty($email) || !empty($number)) {
@@ -22,14 +30,19 @@ function formEditor(): array{
             $errors[] = 'Enter a valid number!';
         }
     }
-    else {
-        $errors[] = 'Fill in all fields!';
-    }
 
     if (empty($errors)) {
+        $sql = "INSERT INTO users (name, email, number, description) VALUES ('$name', '$email', '$number', '$description')";
         mysqli_query($link, $sql);
-        $errors[] = 'Application sent successfully!';
-        return $errors;
+
     }
     return $errors;
+}
+
+function descriptionHandler(){
+    echo $_POST["description"];
+    
+    if ($_POST["description"]!="" && $_POST["clearFilter"]=="") {       
+        return $_POST['description'];                          
+    }
 }
