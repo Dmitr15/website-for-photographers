@@ -4,4 +4,3 @@ if ($_POST["clearFilter"] !='') {
     header("Location: http://localhost/PhotoWebsite/index.php");
 }
 $link = mysqli_connect("localhost", "root", "", "photosite"); 
-
