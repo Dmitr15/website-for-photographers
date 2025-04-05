@@ -1,5 +1,7 @@
 <?php
 error_reporting(E_ERROR | E_PARSE);
+session_start();
+unset($_SESSION['form_submit']);
 //require_once("formhandler.php");
 //$errors = formEditor();
 //$description = descriptionHandler();
