@@ -1,4 +1,4 @@
-<section>
+<section id="about">
     <div class="my-4">
       <div class="py-4">
         <h2 class="text-center">About Me</h2>
