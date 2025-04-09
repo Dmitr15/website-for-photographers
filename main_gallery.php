@@ -37,7 +37,7 @@
     </button>
   </div>
 
-  <section class="my-4">
+  <section class="my-4" id="nature">
     <div class='py-4'>
       <h2 class="text-center">Nature</h2>
     </div>
@@ -56,7 +56,7 @@
     </div>
   </section>
 
-  <section class="my-4">
+  <section class="my-4" id="architecture">
     <div class='py-4'>
       <h2 class="text-center">Architecture</h2>
     </div>
@@ -75,7 +75,7 @@
     </div>
   </section>
 
-  <section class="my-4">
+  <section class="my-4" id="travel">
     <div class='py-4'>
       <h2 class="text-center">Travel</h2>
     </div>
