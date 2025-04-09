@@ -1,18 +1,24 @@
 <?php
 require_once("db.php");
+session_start();
+function formEditor(): array
+{
 
-function formEditor(): array{
-    
-    $errors= [];
+    $errors = [];
     global $link;
-    if (!empty($_POST['clearFilter'])) {
-        return $errors;
-    }
 
     if ('POST' != $_SERVER['REQUEST_METHOD']) {
         return $errors;
     }
-    
+
+    if (empty($_POST['submit'])) {
+        return $errors;
+    }
+
+    if (!empty($_SESSION['form_submit'])) {
+        return $errors;
+    }
+
     $name = mysqli_real_escape_string($link, $_POST['name']);
     $email = mysqli_real_escape_string($link, $_POST['email']);
     $number = mysqli_real_escape_string($link, $_POST['number']);
@@ -32,17 +38,22 @@ function formEditor(): array{
     }
 
     if (empty($errors)) {
+        $_SESSION['form_submit'] = [
+            'name' => $_POST['name'],
+            'email' => $_POST['email'],
+            'number' => $_POST['number'],
+            'description' => $_POST['description']
+        ];
+
         $sql = "INSERT INTO users (name, email, number, description) VALUES ('$name', '$email', '$number', '$description')";
         mysqli_query($link, $sql);
-
     }
     return $errors;
 }
 
-function descriptionHandler(){
-    echo $_POST["description"];
-    
-    if ($_POST["description"]!="" && $_POST["clearFilter"]=="") {       
-        return $_POST['description'];                          
+function descriptionHandler()
+{
+    if ($_SESSION['form_submit']["description"] != "" && $_POST["clearFilter"] == "") {
+        return $_SESSION['form_submit']['description'];
     }
 }
