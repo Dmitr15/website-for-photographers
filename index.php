@@ -1,21 +1,13 @@
 <?php
 error_reporting(E_ERROR | E_PARSE);
 session_start();
-unset($_SESSION['form_submit']);
 
-?>
+require_once("head.php");
 
-<?php require_once("head.php"); ?>
+require_once("main_gallery.php");
 
+require_once("form.php");
 
-<?php require_once("main_gallery.php"); ?>
-  
+require_once("about.php");
 
-
-
-<?php ?>
-
-<?php require_once("about.php"); ?>
-
-
-<?php require_once("footer.php");?>
+require_once("footer.php");
