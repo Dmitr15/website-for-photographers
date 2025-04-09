@@ -11,3 +11,15 @@
     box-sizing: border-box;
 }
 
+.reset-btn{
+    color: #fff !important;
+    text-decoration: none !important;
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
+
+    padding-top: 0.375rem !important;
+    padding-right: 0.75rem !important;
+    padding-bottom: 0.375rem !important;
+    padding-left: 0.75rem !important;
+
+}
